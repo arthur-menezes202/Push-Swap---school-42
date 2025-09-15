@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 10:54:25 by armeneze         ###   ########.fr       */
+/*   Created: 2025/09/15 07:40:40 by armeneze          #+#    #+#             */
+/*   Updated: 2025/09/15 10:46:46 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(void)
-{
-	ft_printf("ola mundo makefile");
-	return (0);
-}
+# include "./libft/libft.h"
+
+#endif

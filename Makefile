@@ -6,24 +6,21 @@ CC = cc
 INCLUDES = -I
 SRCDIR = .
 LIBFT = libft/libft.a
-
+LIBFT_DIR = libft
 SRCS = main.c
 
-OBJ = $(SRCS:$(SRCDIR)/%.c=%.o)
+OBJ = $(SRCS:%.c=%.o)
 
 all: $(LIBFT) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) $(LIBFT) -o $(NAME)
+	$(CC) $(OBJ) $(LIBFT) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) $(INCLUDES). -c $< -o $@
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
-
-$(LIBFT):
-	make -C libft
 
 clean:
 	rm -f $(OBJ)

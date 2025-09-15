@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 11:55:48 by armeneze          #+#    #+#             */
-/*   Updated: 2025/07/31 09:10:23 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/15 10:49:10 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
+int	ft_printf(const char *string, ...);
+int	write_character(char c);
+int	write_string(char *s);
+int	write_pointer(unsigned long n);
+int	write_positive(unsigned int number);
+int	write_int(int number);
+int	write_h_x(unsigned long number, const char *base);
 #endif

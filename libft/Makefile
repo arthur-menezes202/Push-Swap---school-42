@@ -45,6 +45,11 @@ SRCS =	$(SRCDIR)/ft_isalpha.c \
  		$(SRCDIR)/ft_putendl_fd.c \
  		$(SRCDIR)/ft_putnbr_fd.c \
  		$(SRCDIR)/ft_split.c \
+		$(SRCDIR)/ft_printf/ft_printf.c\
+		$(SRCDIR)/ft_printf/write_hexadecimal.c\
+		$(SRCDIR)/ft_printf/write_ints.c\
+		$(SRCDIR)/ft_printf/write_pointer.c\
+		$(SRCDIR)/ft_printf/write_strings.c\
 
 SRCS_BONUS =	$(SRCDIR)/ft_lstnew_bonus.c \
 				$(SRCDIR)/ft_lstadd_front_bonus.c \

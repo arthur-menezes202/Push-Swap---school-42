@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:40:40 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 07:42:15 by armeneze         ###   ########.fr       */
+/*   Created: 2025/08/04 15:14:19 by armeneze          #+#    #+#             */
+/*   Updated: 2025/09/15 10:49:52 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN
-# define MAIN
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	test(void);
+# include <unistd.h>
+# include "../libft.h"
 
 #endif

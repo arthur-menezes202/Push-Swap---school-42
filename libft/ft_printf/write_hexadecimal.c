@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   write_hexadecimal.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 10:54:25 by armeneze         ###   ########.fr       */
+/*   Created: 2025/08/04 18:38:53 by armeneze          #+#    #+#             */
+/*   Updated: 2025/08/15 13:43:32 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "push_swap.h"
+#include "ft_printf.h"
 
-int	main(void)
+int	write_h_x(unsigned long number, const char *base);
+
+int	write_h_x(unsigned long number, const char *base)
 {
-	ft_printf("ola mundo makefile");
-	return (0);
+	int	count;
+
+	count = 0;
+	if (number >= 16)
+	{
+		count += write_h_x(number / 16, base);
+	}
+	write(1, &base[number % 16], 1);
+	count++;
+	return (count);
 }
