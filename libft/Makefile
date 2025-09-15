@@ -50,38 +50,28 @@ SRCS =	$(SRCDIR)/ft_isalpha.c \
 		$(SRCDIR)/ft_printf/write_ints.c\
 		$(SRCDIR)/ft_printf/write_pointer.c\
 		$(SRCDIR)/ft_printf/write_strings.c\
-
-SRCS_BONUS =	$(SRCDIR)/ft_lstnew_bonus.c \
-				$(SRCDIR)/ft_lstadd_front_bonus.c \
-				$(SRCDIR)/ft_lstsize_bonus.c \
-				$(SRCDIR)/ft_lstlast_bonus.c \
-				$(SRCDIR)/ft_lstadd_back_bonus.c \
-				$(SRCDIR)/ft_lstdelone_bonus.c \
-				$(SRCDIR)/ft_lstclear_bonus.c \
-				$(SRCDIR)/ft_lstiter_bonus.c \
-				$(SRCDIR)/ft_lstmap_bonus.c \
-
-#troca o nome para .o
-OBJ_BONUS = $(SRCS_BONUS:$(SRCDIR)/%.c=%.o)
+		$(SRCDIR)/ft_lstnew_bonus.c \
+		$(SRCDIR)/ft_lstadd_front_bonus.c \
+		$(SRCDIR)/ft_lstsize_bonus.c \
+		$(SRCDIR)/ft_lstlast_bonus.c \
+		$(SRCDIR)/ft_lstadd_back_bonus.c \
+		$(SRCDIR)/ft_lstdelone_bonus.c \
+		$(SRCDIR)/ft_lstclear_bonus.c \
+		$(SRCDIR)/ft_lstiter_bonus.c \
+		$(SRCDIR)/ft_lstmap_bonus.c \
 
 OBJ = $(SRCS:$(SRCDIR)/%.c=%.o)
 
-#roda os comandos necessario e cria os arquivos .o
 %.o: $(SRCDIR)/%.c
 	$(CC) $(FLAGS) -I $(INCLUDES) -c $< -o $@
 
-#agrupa tudo em uma biblioteca estatica com o nome que foi passado com o camando ar
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 all: $(NAME)
 
-bonus: $(OBJ_BONUS) $(NAME)
-	ar rcs $(NAME) $(OBJ_BONUS)
-
 clean:
 	rm -rf $(OBJ)
-	rm -rf $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME) $(OBJ)

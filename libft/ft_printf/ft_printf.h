@@ -6,14 +6,13 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 15:14:19 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 10:49:52 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/15 11:00:29 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <unistd.h>
 # include "../libft.h"
 
 #endif

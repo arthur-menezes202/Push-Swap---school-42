@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 11:55:48 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 10:49:10 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/15 11:00:35 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <unistd.h>
 
 typedef struct s_list {
 	void			*content;
