@@ -1,13 +1,15 @@
 NAME = push_swap
-FLAGS = -Wall -Werror -Wextra
-CC = cc
+# FLAGS = -Wall -Werror -Wextra
+FLAGS =
+CC = cc -g3
+
 
 #includes
 INCLUDES = -I
 SRCDIR = .
 LIBFT = libft/libft.a
 LIBFT_DIR = libft
-SRCS = main.c
+SRCS = $(wildcard $(SRCDIR)/*.c)
 
 OBJ = $(SRCS:%.c=%.o)
 

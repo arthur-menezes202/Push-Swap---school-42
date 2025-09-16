@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   insert_string_list.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/16 17:44:34 by armeneze         ###   ########.fr       */
+/*   Created: 2025/09/16 16:47:34 by armeneze          #+#    #+#             */
+/*   Updated: 2025/09/16 17:54:07 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+char	*find_number(char *string_number)
 {
+	char	*temp;
+
+	return (NULL);
+}
+
+void	insert_string_list(char *string_number)
+{
+	char	*temp_number_char;
+	int		temp_number_int;
 	int		count;
-	int		*array_int;
 
-	if (argc > 1)
+	count = 0;
+	while (count < 10)
 	{
-		all_validation(argc, argv);
+		temp_number_char = find_number(string_number);
+		if (temp_number_char == NULL)
+			// break ;
+		count ++;
 	}
-	printf("Fim do algoritimo");
-
-	return (0);
+	if (count == 10)
+		printf("chegou a contagem de 10");
 }
