@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/16 17:44:34 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/17 13:35:51 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	main(int argc, char **argv)
 		all_validation(argc, argv);
 	}
 	printf("Fim do algoritimo");
-
 	return (0);
 }
