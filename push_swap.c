@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validation_number.c                                :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 16:49:19 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/16 17:49:04 by armeneze         ###   ########.fr       */
+/*   Created: 2025/09/22 09:20:17 by armeneze          #+#    #+#             */
+/*   Updated: 2025/09/22 15:08:12 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// void	validation_n(char *argv)
-// {
-// 	int long	number;
+#include "push_swap.h"
 
-// 	number = ft_atoi(argv);
-// 	if (number > 2147483648 || number < -2147483649)
-// 		write_error();
-// 	return ;
-// }
+void	start_push_swap(void)
+{
+    t_a_node *stack_a;
+	printf("Início start_push_swap\n");
+	t_a_node *first_element = stack_a->data;
+
+	printf("O primeiro elemento da lista é: %d\n", first_element->data);
+	return ;
+}
+

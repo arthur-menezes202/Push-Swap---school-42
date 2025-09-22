@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stack_manage.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/22 15:08:21 by armeneze         ###   ########.fr       */
+/*   Created: 2025/09/18 15:55:58 by armeneze          #+#    #+#             */
+/*   Updated: 2025/09/22 14:21:14 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+t_a_node	*isert_stack_a(int value)
 {
-	int		count;
-	int		*array_int;
+	t_a_node	*new_node;
 
-	if (argc > 1)
-	{
-		all_validation(argc, argv);
-		start_push_swap();
-	}
-
-	printf("Fim do algoritimo");
-	return (0);
+	new_node = (t_a_node *)malloc(sizeof(t_a_node));
+	if (!new_node)
+		return (NULL);
+	new_node->data = value;
+	new_node->next = NULL;
+	return (new_node);
 }
+
+t_b_node	*isert_stack_b(int value)
+{
+	t_b_node	*new_node;
+
+	new_node = (t_b_node *)malloc(sizeof(t_b_node));
+	if (!new_node)
+		return (NULL);
+	new_node->data = value;
+	new_node->next = NULL;
+	return (new_node);
+}
+
+
