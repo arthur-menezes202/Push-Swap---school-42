@@ -6,19 +6,22 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 09:20:17 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/22 15:08:12 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/23 12:07:08 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	start_push_swap(void)
+void	start_push_swap(int **array_int)
 {
-    t_a_node *stack_a;
-	printf("Início start_push_swap\n");
-	t_a_node *first_element = stack_a->data;
+	t_a_node	*a_stack;
 
-	printf("O primeiro elemento da lista é: %d\n", first_element->data);
+	printf("Início start_push_swap\n");
+
+	insert_list_array(array_int, &a_stack);
+	validation_list(&a_stack);
+	free(array_int);
+	printf("final start_push_swap\n");
 	return ;
 }
 

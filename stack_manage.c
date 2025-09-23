@@ -6,11 +6,42 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 15:55:58 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/22 14:21:14 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/23 13:30:24 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	insert_list_array(int **array_int, t_a_node **a_stack)
+{
+	int			i;
+	t_a_node	*new_node;
+	t_a_node	*last_node;
+	int			number;
+
+	i = 0;
+	*a_stack = NULL;
+	while (array_int[i] != NULL)
+	{
+		number = (int)array_int[i];
+		new_node = isert_stack_a(number);
+		if (new_node == NULL)
+			return ;
+		if (*a_stack == NULL)
+			*a_stack = new_node;
+		else
+		{
+			last_node = *a_stack;
+			while (last_node->next != NULL)
+			{
+				last_node = last_node->next;
+			}
+			last_node->next = new_node;
+		}
+		i++;
+	}
+	
+}
 
 t_a_node	*isert_stack_a(int value)
 {
@@ -36,4 +67,15 @@ t_b_node	*isert_stack_b(int value)
 	return (new_node);
 }
 
+void	validation_list(t_a_node **a_stack)
+{
+	t_a_node	*current;
+	t_a_node	*next;
 
+	current = *a_stack;
+	while (current != NULL)
+	{
+		printf("verificando no %d\n", current->data);
+		current = current->next;
+	}
+}

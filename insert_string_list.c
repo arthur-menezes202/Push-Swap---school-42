@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 16:47:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/22 15:08:02 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/22 17:04:08 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,23 +66,24 @@ int	transforme_number(char *number)
 	return ((int)temp_ll);
 }
 
-void	insert_string_list(char *string_number)
+int	**insert_string_list(char *string_number)
 {
 	char		**temp_number_char;
 	int long	number_position;
 	int			count;
+	int			**array_int;
 
 	count = 0;
 	temp_number_char = ft_split(string_number, ' ');
 	free(string_number);
+	array_int = malloc(sizeof(int *) * (ft_strlen_array(temp_number_char) + 1));
 	while (temp_number_char[count] != NULL)
 	{
 		validation_repet_number(temp_number_char[count], temp_number_char);
 		number_position = transforme_number(temp_number_char[count]);
-		isert_stack_a((int)number_position);
+		array_int[count] = (int)number_position;
 		printf("numero validado: %d\n", number_position);
 		count ++;
 	}
-	
-	return ;
+	return (array_int);
 }
