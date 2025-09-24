@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/22 16:38:09 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/24 13:55:19 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	validation_c_s(char *argv)
 	}
 }
 
-int	**all_validation(int argc, char **argv)
+int	*all_validation(int argc, char **argv)
 {
 	int		count;
 	char	*string_numbers;
@@ -108,6 +108,5 @@ int	**all_validation(int argc, char **argv)
 		string_numbers = temp;
 		count++;
 	}
-	printf("%s\n", string_numbers);
 	return (insert_string_list(string_numbers));
 }
