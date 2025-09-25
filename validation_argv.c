@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/24 13:55:19 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/25 17:17:48 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,6 @@ void	remove_multiple_spaces(char *str)
 	*writer = '\0';
 }
 
-char	*treat_space(char *argv)
-{
-	char	*temp;
-	size_t	len;
-
-	remove_multiple_spaces(argv);
-	len = ft_strlen(argv);
-	if (len > 0 && argv[len - 1] != ' ')
-	{
-		temp = ft_strjoin(argv, " ");
-	}
-	else
-		temp = ft_strjoin(argv, "");
-	return (temp);
-}
-
 void	validation_c_s(char *argv)
 {
 	int	count;
@@ -82,31 +66,10 @@ void	validation_c_s(char *argv)
 
 int	*all_validation(int argc, char **argv)
 {
-	int		count;
 	char	*string_numbers;
-	char	*arg_with_space;
-	char	*temp;
+	int		*result;
 
-	count = 1;
-	string_numbers = NULL;
-	while (count < argc)
-	{
-		validation_c_s(argv[count]);
-		if (string_numbers == NULL)
-		{
-			arg_with_space = treat_space(argv[count]);
-			temp = ft_strjoin(" ", arg_with_space);
-			free(arg_with_space);
-		}
-		else
-		{
-			arg_with_space = treat_space(argv[count]);
-			temp = ft_strjoin(string_numbers, arg_with_space);
-			free(arg_with_space);
-			free(string_numbers);
-		}
-		string_numbers = temp;
-		count++;
-	}
-	return (insert_string_list(string_numbers));
+	string_numbers = join_args_with_space(argc, argv);
+	result = insert_string_list(string_numbers);
+	return (result);
 }

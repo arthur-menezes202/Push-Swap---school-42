@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 16:47:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/24 13:58:51 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/25 17:12:03 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,7 @@ int	transforme_number(char *number)
 
 	if (ft_strlen(number) > 11)
 		write_error();
-	// ainda preciso desenvolver essa função
-	temp_ll = strtol(number, &endptr, 10);
+	temp_ll = ft_strtol(number, &endptr, 10);
 	if (*endptr != '\0' && *endptr != '\n')
 	{
 		write_error();
@@ -76,7 +75,7 @@ int	*insert_string_list(char *string_number)
 	count = 0;
 	temp_number_char = ft_split(string_number, ' ');
 	free(string_number);
-	array_int = malloc(sizeof(int *) * (ft_strlen_array(temp_number_char) + 1));
+	array_int = malloc(sizeof(int) * (ft_strlen_array(temp_number_char) + 1));
 	while (temp_number_char[count] != NULL)
 	{
 		validation_repet_number(temp_number_char[count], temp_number_char);
@@ -84,5 +83,12 @@ int	*insert_string_list(char *string_number)
 		array_int[count] = (int)number_position;
 		count ++;
 	}
+	count = 0;
+	while (temp_number_char[count] != NULL)
+	{
+		free(temp_number_char[count]);
+		count ++;
+	}
+	free(temp_number_char);
 	return (array_int);
 }
