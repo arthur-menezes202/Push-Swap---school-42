@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 07:40:40 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 17:18:40 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/25 17:26:16 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ char		*join_one_arg(char *string_numbers, char *arg);
 char		*join_args_with_space(int argc, char **argv);
 char		*treat_space(char *argv);
 
-
-
 //////////////////////* Validations *//////////////////////
 
 void		write_error(void);
@@ -61,14 +59,9 @@ t_b_node	*isert_stack_b(int value);
 void		insert_list_array(int *array_int, t_a_node **a_stack);
 void		validation_list(t_a_node **a_stack);
 
-
 ////////////////////////* turk algorithm *////////////////////////
 
 void		turk_algorithm(t_a_node **a_stack, t_b_node **b_stack);
-
-
-
-
 
 ///////////////////////* swap *///////////////////////
 
@@ -93,9 +86,6 @@ void		rra(t_a_node **a_stack, int flag);
 void		rrb(t_b_node **b_stack, int flag);
 void		rrr(t_a_node **a_stack, t_b_node **b_stack);
 
-
 //////////////////// *apagar* ///////////////////////
-
-void populate_list(t_b_node **list, int count);
 
 #endif

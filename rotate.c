@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 11:05:54 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 14:23:49 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/25 17:25:28 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void	rb(t_b_node **b_stack, int flag)
 
 void	rr(t_a_node **a_stack, t_b_node **b_stack)
 {
-
 	ra(a_stack, 0);
 	rb(b_stack, 0);
 	ft_printf("rr\n");

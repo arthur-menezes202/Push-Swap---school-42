@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 12:14:12 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/24 15:11:30 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/25 17:22:56 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	sb(t_b_node **b_stack, int flag)
 	second->data = swap;
 	if (flag == 1)
 		ft_printf("sb\n");
-	return ;
 	return ;
 }
 
