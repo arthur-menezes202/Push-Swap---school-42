@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 16:47:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 17:12:03 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:54:27 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	validation_repet_number(char *number, char **n_char)
 	return ;
 }
 
-int	transforme_number(char *number)
+int	transforme_n(char *number)
 {
 	long long	temp_ll;
 	char		*endptr;
@@ -65,30 +65,27 @@ int	transforme_number(char *number)
 	return ((int)temp_ll);
 }
 
-int	*insert_string_list(char *string_number)
+void	insert_string_list(char *string_number, t_a_node **a_stack)
 {
 	char		**temp_number_char;
 	int long	number_position;
 	int			count;
-	int			*array_int;
 
 	count = 0;
 	temp_number_char = ft_split(string_number, ' ');
-	free(string_number);
-	array_int = malloc(sizeof(int) * (ft_strlen_array(temp_number_char) + 1));
-	while (temp_number_char[count] != NULL)
+	while (count < count_words(string_number, ' '))
 	{
 		validation_repet_number(temp_number_char[count], temp_number_char);
-		number_position = transforme_number(temp_number_char[count]);
-		array_int[count] = (int)number_position;
+		insert_list_array(transforme_n(temp_number_char[count]), a_stack);
 		count ++;
 	}
 	count = 0;
-	while (temp_number_char[count] != NULL)
+	while (count < count_words(string_number, ' '))
 	{
 		free(temp_number_char[count]);
 		count ++;
 	}
+	free(string_number);
 	free(temp_number_char);
-	return (array_int);
+	return ;
 }

@@ -1,30 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   count_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/06 10:57:39 by armeneze         ###   ########.fr       */
+/*   Created: 2025/09/29 10:39:10 by armeneze          #+#    #+#             */
+/*   Updated: 2025/10/02 13:53:57 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	get_list_size(t_a_node *stack)
 {
+	t_a_node	*count_node;
 	int			count;
-	int			*array_int;
-	t_a_node	*a_stack;
 
-	a_stack = NULL;
-
-	if (argc > 1)
+	count_node = stack;
+	count = 0;
+	while (count_node->next != NULL)
 	{
-		all_validation(argc, argv, &a_stack);
-		start_push_swap(&a_stack);
+		count_node = count_node->next;
+		count ++;
 	}
-	return (0);
+	return (count);
+}
+
+int	count_words(char const *s, char c)
+{
+	int	count;
+	int	in_word;
+
+	count = 0;
+	in_word = 0;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			in_word = 0;
+		}
+		else if (in_word == 0)
+		{
+			in_word = 1;
+			count++;
+		}
+		s++;
+	}
+	return (count);
 }

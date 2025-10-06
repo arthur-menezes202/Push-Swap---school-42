@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 16:48:12 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 17:10:02 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/09/30 10:23:21 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 #include <limits.h>
 #include <ctype.h>
+
+int	ft_strlen_array_int(int *array)
+{
+	int	count;
+
+	count = 0;
+	while (array[count] != 0)
+		count++;
+	return (count);
+}
 
 int	ft_strlen_array(char **str)
 {

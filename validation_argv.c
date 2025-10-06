@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 17:17:48 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:55:00 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,11 @@ void	validation_c_s(char *argv)
 	}
 }
 
-int	*all_validation(int argc, char **argv)
+void	all_validation(int argc, char **argv, t_a_node **a_stack)
 {
 	char	*string_numbers;
-	int		*result;
 
 	string_numbers = join_args_with_space(argc, argv);
-	result = insert_string_list(string_numbers);
-	return (result);
+	insert_string_list(string_numbers, a_stack);
+	return ;
 }

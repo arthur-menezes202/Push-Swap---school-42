@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 15:55:19 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 10:58:36 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/06 11:13:45 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ void	pb(t_a_node **a_stack, t_b_node **b_stack, int flag)
 	*a_stack = (*a_stack)->next;
 	free(first_a);
 	if (flag == 1)
-		ft_printf("pc\n");
+		ft_printf("pb\n");
 	return ;
 }
