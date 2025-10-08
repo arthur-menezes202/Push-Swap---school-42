@@ -6,20 +6,20 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 10:39:10 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/02 13:53:57 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/07 15:43:08 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	get_list_size(t_a_node *stack)
+int	get_list_size(t_a_node **stack)
 {
 	t_a_node	*count_node;
 	int			count;
 
-	count_node = stack;
+	count_node = *stack;
 	count = 0;
-	while (count_node->next != NULL)
+	while (count_node != NULL)
 	{
 		count_node = count_node->next;
 		count ++;

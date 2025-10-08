@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 07:40:40 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/06 10:59:02 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/07 16:54:43 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,25 @@ void		rrr(t_a_node **a_stack, t_b_node **b_stack);
 
 ////////////////////////* count_list */////////////////////
 
-int			get_list_size(t_a_node *stack);
+int			get_list_size(t_a_node **stack);
 int			count_words(char const *s, char c);
 
+/////////////////////////* index list *///////////////////////
 
+int			max_index_list(t_b_node **b_stack);
+int			min_index_list(t_b_node **b_stack);
+int			get_max_index_node_position(t_b_node **b_stack);
+
+
+////////////////////////* move_b *//////////////////
+
+void		move_b_no_start(t_b_node **b_stack, int index);
+void		move_b_no_end(t_b_node **b_stack, int index);
+
+
+////////////////////////* chunks *//////////////////////
+
+void		push_chunks(t_a_node **a, t_b_node **b);
 
 //////////////////// *apagar* ///////////////////////
 

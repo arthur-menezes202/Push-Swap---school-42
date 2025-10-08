@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 15:55:19 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/06 11:13:45 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/06 13:58:00 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	pa(t_a_node **a_stack, t_b_node **b_stack, int flag)
 	if (new == NULL)
 		return ;
 	new->data = first_b->data;
+	new->index = first_b->index;
 	new->next = *a_stack;
 	*a_stack = new;
 	*b_stack = (*b_stack)->next;
@@ -43,6 +44,7 @@ void	pb(t_a_node **a_stack, t_b_node **b_stack, int flag)
 	if (new == NULL)
 		return ;
 	new->data = first_a->data;
+	new->index = first_a->index;
 	new->next = *b_stack;
 	*b_stack = new;
 	*a_stack = (*a_stack)->next;
