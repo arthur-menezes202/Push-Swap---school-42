@@ -1,39 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move_b.c                                           :+:      :+:    :+:   */
+/*   validation_zero.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 15:10:07 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/07 15:21:44 by armeneze         ###   ########.fr       */
+/*   Created: 2025/10/09 20:24:59 by armeneze          #+#    #+#             */
+/*   Updated: 2025/10/11 17:45:04 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	move_b_no_start(t_b_node **b_stack, int index)
+void	validation_zero(char *str)
 {
-	t_b_node	*first_node;
-	int			min_rank;
+	int	i;
 
-	first_node = *b_stack;
-	while (first_node->index != index)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		rb(b_stack, 1);
-		first_node = *b_stack;
+		if (str[i] == '-' && str[i + 1] == '0')
+			free_char_error(str);
+		i++ ;
 	}
 }
 
-void	move_b_no_end(t_b_node **b_stack, int index)
+void	free_char_error(char *s)
 {
-	t_b_node	*first_node;
-	int			min_rank;
+	free(s);
+	write_error();
+}
 
-	first_node = *b_stack;
-	while (first_node->index != index)
+void	free_array_error(char **array)
+{
+	int	count;
+
+	count = 0;
+	while (array[count] != NULL)
 	{
-		rrb(b_stack, 1);
-		first_node = *b_stack;
+		free(array[count]);
+		count ++;
 	}
+	free(array);
+	return ;
 }

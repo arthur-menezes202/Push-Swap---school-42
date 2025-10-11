@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:21:48 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/15 11:34:48 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/11 20:27:07 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	write_error(void)
 {
-	ft_printf("Error\n");
+	write(2, "Error\n", 6);
 	exit(0);
 }

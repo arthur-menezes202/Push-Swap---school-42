@@ -6,12 +6,39 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/06 10:55:00 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/11 19:21:15 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <string.h>
+
+void	remove_multiple_zero(char *str)
+{
+	char	*reader;
+	char	*writer;
+	char	*first_non_zero;
+
+	if (str == NULL || *str == '\0')
+		return ;
+	reader = str;
+	writer = str;
+	if (*reader == '+' || *reader == '-')
+	{
+		if (*reader == '-')
+			*writer++ = *reader;
+		reader++;
+	}
+	first_non_zero = reader;
+	while (*first_non_zero == '0' && *(first_non_zero + 1) != '\0')
+		first_non_zero++;
+	reader = first_non_zero;
+	while (*reader != '\0')
+	{
+		*writer++ = *reader++;
+	}
+	*writer = '\0';
+}
 
 void	remove_multiple_spaces(char *str)
 {
@@ -38,7 +65,7 @@ void	remove_multiple_spaces(char *str)
 	*writer = '\0';
 }
 
-void	validation_c_s(char *argv)
+void	validation_c_s(char *argv, char *string_numbers)
 {
 	int	count;
 
@@ -52,15 +79,16 @@ void	validation_c_s(char *argv)
 		}
 		if (argv[count] == '-' || argv[count] == '+')
 		{
-			if (argv[count + 1] == '-' || argv[count + 1] == '+')
-				write_error();
+			if (argv[count + 1] == '-' || argv[count + 1] == '+'
+				|| argv[count + 1] == ' ' || argv[count + 1] == '\0')
+				free_char_error(string_numbers);
 			count ++;
 			continue ;
 		}
 		if (argv[count] > 47 && argv[count] < 58)
 			count ++;
 		else
-			write_error();
+			free_char_error(string_numbers);
 	}
 }
 
@@ -69,6 +97,7 @@ void	all_validation(int argc, char **argv, t_a_node **a_stack)
 	char	*string_numbers;
 
 	string_numbers = join_args_with_space(argc, argv);
+	validation_zero(string_numbers);
 	insert_string_list(string_numbers, a_stack);
 	return ;
 }

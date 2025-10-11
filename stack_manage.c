@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 15:55:58 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/06 11:04:40 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/11 16:08:03 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	validation_list(t_a_node **a_stack)
 		}
 		current = current->next;
 	}
+	clear_list(a_stack);
 	exit(0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 17:15:22 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 17:17:52 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/11 18:49:08 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*treat_space(char *argv)
 	size_t	len;
 
 	remove_multiple_spaces(argv);
+	remove_multiple_zero(argv);
 	len = ft_strlen(argv);
 	if (len > 0 && argv[len - 1] != ' ')
 	{
@@ -57,7 +58,9 @@ char	*join_args_with_space(int argc, char **argv)
 	string_numbers = NULL;
 	while (count < argc)
 	{
-		validation_c_s(argv[count]);
+		if ((argv[count] == NULL || *argv[count] == '\0') && argc == 2)
+			exit(0);
+		validation_c_s(argv[count], string_numbers);
 		temp = join_one_arg(string_numbers, argv[count]);
 		string_numbers = temp;
 		count++;

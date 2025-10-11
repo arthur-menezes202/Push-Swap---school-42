@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 13:59:32 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/07 15:40:35 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:51:19 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,26 @@ int	get_max_index_node_position(t_b_node **b_stack)
 		}
 		count++;
 		node_b = node_b->next;
+	}
+	return (count);
+}
+
+
+int	get_index_node_position_a(t_a_node **a_stack, int index)
+{
+	t_a_node	*node_a;
+	int			count;
+
+	node_a = *a_stack;
+	count = 0;
+	while (node_a != NULL)
+	{
+		if (node_a->index == index)
+		{
+			return (count);
+		}
+		count++;
+		node_a = node_a->next;
 	}
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 12:28:30 by armeneze          #+#    #+#             */
-/*   Updated: 2025/09/25 13:16:48 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:58:02 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,11 @@ void	rrb(t_b_node **b_stack, int flag)
 {
 	t_b_node	*end;
 	t_b_node	*before_end;
+	int			n;
 
+	n = get_list_size(b_stack);
+	if (n <= 1)
+		return ;
 	before_end = *b_stack;
 	end = (*b_stack)->next;
 	while (end->next != NULL)
