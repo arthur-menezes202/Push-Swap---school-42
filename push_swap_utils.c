@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 16:48:12 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/10 16:13:25 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:44:27 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_strlen_array(char **str)
 	return (count);
 }
 
-static const char	*ft_strtol_prepare(const char *nptr, int *sign)
+const char	*ft_strtol_prepare(const char *nptr, int *sign)
 {
 	const char	*ptr;
 

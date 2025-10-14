@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 16:47:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 11:40:56 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:40:22 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdlib.h>
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp_push(const char *s1, const char *s2)
 {
 	size_t	i;
 
@@ -40,7 +40,7 @@ void	validation_repet_number(char *number, char **n_char, t_a_node **a,
 	count_repet = 0;
 	while (n_char[count] != NULL)
 	{
-		if (ft_strcmp(n_char[count], number) == 0)
+		if (ft_strcmp_push(n_char[count], number) == 0)
 		{
 			count_repet++;
 		}

@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 11:07:35 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:35:22 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void	remove_multiple_zero(char *str)
 		reader++;
 	}
 	first_non_zero = reader;
-	while (*first_non_zero == '0' && *(first_non_zero + 1) != '\0' && *(first_non_zero + 1) != ' ')
+	while (*first_non_zero == '0' && *(first_non_zero + 1) != '\0'
+		&& *(first_non_zero + 1) != ' ')
 		first_non_zero++;
 	reader = first_non_zero;
 	while (*reader != '\0')

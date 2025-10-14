@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 07:29:45 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/13 17:58:13 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:34:02 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	main(int argc, char **argv)
 		write_error();
 	if (argc > 1)
 	{
-
 		all_validation(argc, argv, &a_stack);
 		if (get_list_size(&a_stack) == 0)
 		{

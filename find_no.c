@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:03:28 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/13 20:24:35 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:33:11 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_a_node	*get_last_node_a(t_a_node **a)
 
 	if (a == NULL)
 		return (NULL);
-
 	current = *a;
 	while (current->next != NULL)
 	{
@@ -31,6 +30,5 @@ int	get_first_node_a(t_a_node *a_stack)
 {
 	if (a_stack == NULL)
 		return (0);
-
 	return (a_stack->index);
 }

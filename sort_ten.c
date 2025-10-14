@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:37:31 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 18:22:17 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:35:03 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	is_sorted_a(t_a_node *a_stack)
 
 	if (a_stack == NULL || a_stack->next == NULL)
 		return (1);
-
 	current = a_stack;
 	while (current->next != NULL)
 	{

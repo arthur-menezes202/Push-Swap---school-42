@@ -6,12 +6,11 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:19:39 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 18:12:18 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:32:57 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 int	get_min_index_node_position(t_a_node **a)
 {
@@ -39,7 +38,6 @@ void	move_to_top_optimized(t_a_node **a_stack, int position)
 	int	size;
 
 	size = get_list_size(a_stack);
-
 	if (position == 0)
 		return ;
 	if (position <= size / 2)

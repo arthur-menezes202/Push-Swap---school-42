@@ -6,13 +6,11 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 09:20:17 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 18:07:47 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:45:21 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// Assumindo que get_min_pos_a agora aceita um 'min_rank' para procurar
 
 int	get_min_pos_a(t_a_node **a_stack)
 {
@@ -86,11 +84,11 @@ void	sort_three(t_a_node **a_stack)
 	c = b->next;
 	if (a->index < b->index && b->index < c->index)
 		return ;
-	if (a->index > b->index && a->index > c->index) 
+	if (a->index > b->index && a->index > c->index)
 	{
 		ra(a_stack, 1);
 	}
-	else if (a->index < b->index && b->index > c->index) 
+	else if (a->index < b->index && b->index > c->index)
 	{
 		rra(a_stack, 1);
 	}
@@ -108,7 +106,6 @@ void	start_push_swap(t_a_node **a_stack)
 	b_stack = NULL;
 	insert_rank(a_stack);
 	validation_list(a_stack);
-
 	if (get_list_size(a_stack) <= 2)
 		sa(a_stack, 1);
 	else if (get_list_size(a_stack) < 4)

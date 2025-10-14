@@ -6,12 +6,11 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 10:37:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 18:10:35 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:32:37 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 int	end_index_a(t_a_node **a, int current_limit)
 {
@@ -43,7 +42,6 @@ int	start_index_a(t_a_node **a, int current_limit)
 
 	if (*a == NULL)
 		return (-1);
-
 	head = *a;
 	min_rank_in_chunk = current_limit;
 	while (head != NULL)

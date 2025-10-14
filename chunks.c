@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:52:22 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 18:19:25 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:34:10 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	move_half(t_b_node **b, int chunk_size, int current_limit)
 
 	min = current_limit - chunk_size;
 	max = current_limit;
-
 	n = get_list_size_b(b);
 	first = *b;
 	if ((min + max) / 2 > first->index)
