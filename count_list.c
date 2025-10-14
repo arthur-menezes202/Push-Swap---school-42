@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 10:39:10 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/10 16:32:08 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/11 20:40:42 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,21 @@
 int	get_list_size(t_a_node **stack)
 {
 	t_a_node	*count_node;
+	int			count;
+
+	count_node = *stack;
+	count = 0;
+	while (count_node != NULL)
+	{
+		count_node = count_node->next;
+		count ++;
+	}
+	return (count);
+}
+
+int	get_list_size_b(t_b_node **stack)
+{
+	t_b_node	*count_node;
 	int			count;
 
 	count_node = *stack;

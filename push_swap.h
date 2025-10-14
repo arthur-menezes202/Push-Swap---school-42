@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 07:40:40 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/11 20:35:58 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 16:36:56 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,18 +62,22 @@ void		free_array_error(char **array);
 
 //////////////////////* Insert String List *//////////////////////
 
-void		start_push_swap(t_a_node **a_stack, int argc);
+void		start_push_swap(t_a_node **a_stack);
 t_a_node	*isert_stack_a(int value);
 t_b_node	*isert_stack_b(int value);
 void		insert_list_array(int value, t_a_node **a_stack);
 void		validation_list(t_a_node **a_stack);
 void		insert_rank(t_a_node **a_stack);
 
+t_a_node	*get_last_node_a(t_a_node **a);
+int			get_first_node_a(t_a_node *a_stack);
 
 ////////////////////////* turk algorithm *////////////////////////
 
 void		turk_algorithm(t_a_node **a_stack, t_b_node **b_stack);
 void		sort_three(t_a_node **a_stack);
+void		bubble_sort_a(t_a_node **a_stack);
+int			get_list_size_b(t_b_node **stack);
 
 ///////////////////////* swap *///////////////////////
 
@@ -106,10 +110,10 @@ int			count_words(char const *s, char c);
 /////////////////////////* index list *///////////////////////
 
 int			max_index_list(t_b_node **b_stack);
-int			min_index_list(t_b_node **b_stack);
+int			min_index_list_a(t_a_node **a_stack);
 int			get_max_index_node_position(t_b_node **b_stack);
 int			get_index_node_position_a(t_a_node **a_stack, int index);
-
+void		best_move_five(t_a_node **a, t_b_node **b);
 
 ///////////////////////* move_a *///////////////////////
 

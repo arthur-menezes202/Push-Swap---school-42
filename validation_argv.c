@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:31:14 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/11 19:21:15 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 11:07:35 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	remove_multiple_zero(char *str)
 		reader++;
 	}
 	first_non_zero = reader;
-	while (*first_non_zero == '0' && *(first_non_zero + 1) != '\0')
+	while (*first_non_zero == '0' && *(first_non_zero + 1) != '\0' && *(first_non_zero + 1) != ' ')
 		first_non_zero++;
 	reader = first_non_zero;
 	while (*reader != '\0')
@@ -97,7 +97,6 @@ void	all_validation(int argc, char **argv, t_a_node **a_stack)
 	char	*string_numbers;
 
 	string_numbers = join_args_with_space(argc, argv);
-	validation_zero(string_numbers);
 	insert_string_list(string_numbers, a_stack);
 	return ;
 }

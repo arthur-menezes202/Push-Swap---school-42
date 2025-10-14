@@ -6,26 +6,13 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 12:06:20 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/08 10:41:13 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/13 20:32:14 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	move_b_min_start(t_a_node **a_stack , t_b_node **b_stack)
-{
-	t_b_node	*first_node;
-	int			min_rank;
 
-	min_rank = max_index_list(b_stack);
-	first_node = *b_stack;
-	while (first_node->index != min_rank)
-	{
-		rb(b_stack, 1);
-		first_node = *b_stack;
-	}
-	return (0);
-}
 
 int	move_max_start_or_end(t_b_node **b_stack)
 {
@@ -40,7 +27,7 @@ int	move_max_start_or_end(t_b_node **b_stack)
 
 	head = *b_stack;
 
-	list_size = get_list_size(b_stack);
+	list_size = get_list_size_b(b_stack);
 	max_node_index = get_max_index_node_position(b_stack);
 	cost_rb = max_node_index;
 	cost_rrb = list_size - max_node_index;

@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 11:05:54 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/09 13:00:24 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/13 15:36:37 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	rb(t_b_node **b_stack, int flag)
 	t_b_node	*end;
 	int			n;
 
-	n = get_list_size(b_stack);
+	n = get_list_size_b(b_stack);
 	if (n <= 1)
 		return ;
 	first = *b_stack;

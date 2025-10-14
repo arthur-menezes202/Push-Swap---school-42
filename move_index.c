@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 15:10:07 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/09 12:49:52 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/13 16:20:56 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	move_b_no_start(t_b_node **b_stack, int index)
 {
 	t_b_node	*first_node;
-	int			min_rank;
 
 	first_node = *b_stack;
 	while (first_node->index != index)
@@ -28,7 +27,6 @@ void	move_b_no_start(t_b_node **b_stack, int index)
 void	move_b_no_end(t_b_node **b_stack, int index)
 {
 	t_b_node	*first_node;
-	int			min_rank;
 
 	first_node = *b_stack;
 	while (first_node->index != index)
@@ -41,7 +39,6 @@ void	move_b_no_end(t_b_node **b_stack, int index)
 void	move_a_no_start(t_a_node **a_stack, int index)
 {
 	t_a_node	*first_node;
-	int			min_rank;
 
 	first_node = *a_stack;
 	while (first_node->index != index)
@@ -54,7 +51,6 @@ void	move_a_no_start(t_a_node **a_stack, int index)
 void	move_a_no_end(t_a_node **a_stack, int index)
 {
 	t_a_node	*first_node;
-	int			min_rank;
 
 	first_node = *a_stack;
 	while (first_node->index != index)
