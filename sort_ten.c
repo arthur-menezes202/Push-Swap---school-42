@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:37:31 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 15:14:23 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:22:17 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,58 +31,19 @@ int	is_sorted_a(t_a_node *a_stack)
 	return (1);
 }
 
-void bubble_sort_a(t_a_node **a_stack)
+void	finalize_stack_a(t_a_node **a_stack, int size)
 {
-	int list_size;
-	int i; // Contador de passadas (N-1 passadas)
-	int j; // Contador de elementos em cada passada
+	int			pos_of_min;
+	t_a_node	*current;
 
-	list_size = get_list_size(a_stack); // Correcao: get_list_size recebe t_a_node *
-
-	// Nao faz nada se a lista ja estiver ordenada
-	if (is_sorted_a(*a_stack))
-		return;
-
-	i = 0;
-	// N-1 passadas
-	while (i < list_size - 1) 
-	{
-		j = 0;
-		// CORREÇÃO: A cada passagem, o limite de comparacoes diminui
-		while (j < list_size - 1 - i) 
-		{
-			// 1. Checa se A[0] e maior que A[1]
-			if ((*a_stack)->index > (*a_stack)->next->index)
-			{
-				sa(a_stack, 1); // Troca
-			}
-			
-			// 2. Rotaciona a lista para o proximo par ir para o topo
-			ra(a_stack, 1); 
-			
-			j++;
-		}
-		
-		// CORREÇÃO (Opcional, mas util): Se a lista estiver ordenada, podemos sair mais cedo.
-		if (is_sorted_a(*a_stack))
-			break;
-			
-		i++;
-	}
-	
-	// Rotação Final: Encontra o menor caminho para levar o rank 0 para o topo.
-	int pos_of_min = 0;
-	t_a_node *current = *a_stack;
-
-	// Encontra a posicao (index) do rank 0
+	pos_of_min = 0;
+	current = *a_stack;
 	while (current->index != 0)
 	{
 		current = current->next;
 		pos_of_min++;
 	}
-
-	// Rotaciona (ra ou rra) o menor elemento para o topo da forma mais eficiente
-	if (pos_of_min <= list_size / 2)
+	if (pos_of_min <= size / 2)
 	{
 		while ((*a_stack)->index != 0)
 			ra(a_stack, 1);
@@ -92,4 +53,33 @@ void bubble_sort_a(t_a_node **a_stack)
 		while ((*a_stack)->index != 0)
 			rra(a_stack, 1);
 	}
+}
+
+void	bubble_sort_a(t_a_node **a_stack)
+{
+	int	list_size;
+	int	i;
+	int	j;
+
+	list_size = get_list_size(a_stack);
+	if (is_sorted_a(*a_stack))
+		return ;
+	i = 0;
+	while (i < list_size - 1)
+	{
+		j = 0;
+		while (j < list_size - 1 - i)
+		{
+			if ((*a_stack)->index > (*a_stack)->next->index)
+				sa(a_stack, 1);
+			ra(a_stack, 1);
+			j++;
+		}
+		if (is_sorted_a(*a_stack))
+			break ;
+		i++;
+	}
+	if (!is_sorted_a(*a_stack))
+		return ;
+	finalize_stack_a(a_stack, list_size);
 }

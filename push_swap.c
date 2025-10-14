@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 09:20:17 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/14 16:49:51 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:07:47 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,6 @@ void	sort_four(t_a_node **a_stack, t_b_node **b_stack)
 	}
 	pb(a_stack, b_stack, 1);
 	sort_three(a_stack);
-	pa(a_stack, b_stack, 1);
-}
-
-void	sort_five(t_a_node **a_stack, t_b_node **b_stack)
-{
-	best_move_five(a_stack, b_stack);
-	sort_three(a_stack);
-	pa(a_stack, b_stack, 1);
 	pa(a_stack, b_stack, 1);
 }
 
@@ -125,8 +117,6 @@ void	start_push_swap(t_a_node **a_stack)
 		sort_four(a_stack, &b_stack);
 	else if (get_list_size(a_stack) == 5)
 		sort_five(a_stack, &b_stack);
-	else if (get_list_size(a_stack) <= 10)
-		bubble_sort_a(a_stack);
 	else
 		turk_algorithm(a_stack, &b_stack);
 	return ;

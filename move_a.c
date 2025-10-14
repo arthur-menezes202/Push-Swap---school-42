@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 10:37:34 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/11 20:42:45 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:10:35 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,4 @@ void	execute_min_rotations(t_a_node **a_stack, int target_rank)
 			cost_rra--;
 		}
 	}
-
 }

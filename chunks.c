@@ -6,7 +6,7 @@
 /*   By: armeneze <armeneze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:52:22 by armeneze          #+#    #+#             */
-/*   Updated: 2025/10/13 20:32:21 by armeneze         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:19:25 by armeneze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	size_chunk(int n)
 		c = 10;
 	else if (n <= 100)
 		c = 20;
-	else if (n <= 500)
+	else
 		c = 100;
 	return (c);
 }
